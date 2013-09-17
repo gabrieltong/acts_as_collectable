@@ -3,8 +3,9 @@ module ActsAsCollectable
 
   module ClassMethods
     def acts_as_collectable
-      has_many :collectes,:as=>:collectable
-      before_destroy { |record| record.collectes.destroy_all }
+      pp :acts_as_collectable
+      has_many :collects,:as=>:collectable
+      before_destroy { |record| record.collects.destroy_all }
       include ActsAsCollectable::LocalInstanceMethods
       extend ActsAsCollectable::SingletonMethods
     end
