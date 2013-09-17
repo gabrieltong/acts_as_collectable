@@ -3,7 +3,6 @@ module ActsAsCollectable
 
   module ClassMethods
     def acts_as_collectable
-      pp :acts_as_collectable
       has_many :collects,:as=>:collectable
       before_destroy { |record| record.collects.destroy_all }
       include ActsAsCollectable::LocalInstanceMethods
