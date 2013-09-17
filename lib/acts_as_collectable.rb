@@ -19,3 +19,5 @@ module ActsAsCollectable
     
   end
 end
+
+ActiveRecord::Base.send(:include, ActsAsCollectable)
